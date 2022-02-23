@@ -1,0 +1,132 @@
+* {
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  /* outline: solid red 2px; */
+}
+
+body {
+  background-color: bisque;
+}
+
+.title-container {
+  text-align: center;
+  width: 800px;
+  border-bottom: solid cadetblue 1px;
+}
+#userInput{
+  margin-bottom: 1em;
+}
+
+.game-container {
+  width: 100%;
+  /* pretty much 90% of the view height */
+  /* height: 90vh; */
+  display: flex;
+  flex-direction: column;
+  /* wont work w/o a height */
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid red 2px; */
+}
+.tile-container {
+  margin-bottom: 30px;
+}
+.key-container {
+  width: 690PX;
+  /* height: 30px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+.key-container button {
+  background-color: cadetblue;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  margin: 4px;
+  border: solid black 2px !important;
+}
+.key-container button:nth-child(11){
+   
+  height: 50px;
+  width: 100px;
+}
+.key-container button:nth-child(21) {
+  height: 50px;
+  width: 158px;
+}
+.tile-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tile-container .tile {
+  width: 62px;
+  height: 62px;
+  border: solid rgb(0, 0, 0) 2px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  margin: 2px;
+}
+.msg-container {
+  height: 30px;
+  margin: 10px;
+}
+#word-container{
+  position: absolute;
+  /* border: solid red 2px; */
+  left: 20%;
+  top: 30%;
+  align-items: center;
+  text-align: center;
+}
+#word-container li{
+  margin-top: 2em;
+  margin-left: 2em;
+}
+
+#word-container li:hover{
+  text-decoration: line-through;
+  font-style: italic;
+  cursor: pointer;
+}
+.msg-container p {
+  /* background-color: cadetblue; */
+  /* padding: 10px; */
+  /* margin: 10px; */
+}
+
+.tile.flip{
+  animation: 0.5s linear flipping;
+}
+@keyframes flipping{
+    0%{
+      transform: rotateX(0deg);
+    }
+    50%{
+      transform: rotateX(90deg);
+    }
+    100%{
+      transform: rotateX(0deg);
+    }
+  }
+
+.grey-overlay {
+  /* important over writes all */
+  background-color:gray !important;
+  border: solid black 2px !important;
+}
+.yellow-overlay {
+  background-color: rgb(255, 255, 57) !important;
+  border: solid black 2px !important;
+}
+.green-overlay {
+  background-color: rgb(92, 255, 92) !important;
+  border: solid black 2px !important;
+}
+.no-overlay{
+    border: solid black 2px !important;
+
+}
